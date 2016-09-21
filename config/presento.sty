@@ -145,6 +145,18 @@
   }
 }
 
+\newcommand{\framepicLP}[3][1]{
+  {
+    \usebackgroundtemplate{%
+    \tikz[overlay,remember picture] \node[opacity=#1, at=(current page.center)] {
+      \includegraphics[scale=0.05]{#2}};
+    }
+    \begin{frame}
+    #3
+    \end{frame}
+  }
+}
+
 \newenvironment{baseitemize}
   {\itemize[leftmargin=*]}
   {\enditemize}
