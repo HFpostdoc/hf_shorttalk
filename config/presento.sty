@@ -120,6 +120,19 @@
   }
 }
 
+\newcommand{\framepicDP}[3][1]{
+  {
+    \usebackgroundtemplate{%
+    \tikz[overlay,remember picture] \node[opacity=#1, at=(current page.center)] {
+      \includegraphics[scale=0.5]{#2}};
+    }
+    \begin{frame}
+    #3
+    \end{frame}
+  }
+}
+
+
 \newcommand{\framepicPP}[3][1]{
   {
     \usebackgroundtemplate{%
